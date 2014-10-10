@@ -13,11 +13,23 @@ class Bondia extends CI_Controller {
 		$this->greetings('name');
 	}
 
+	public function greetings1()
+	{
+
+		$data = array();
+
+		$nom = $this->input->get_post('nom');
+
+		$data['nom'] = $nom;
+
+		$this->load->view('greetings',$data);
+	
+	}
+
 	public function greetings($name)
 	{
 		$data = array();
 
-		$data['parametre1'] = $name;
 		$data['parametre2'] = $this->config->item('academic_period');
 
 		$this->load->view('greetings',$data);
