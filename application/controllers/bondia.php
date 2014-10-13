@@ -41,7 +41,19 @@ class Bondia extends CI_Controller {
 	{
 		$data = array();
 
-		$this->load->view('example_form', $data);
+		$data['firstname'] = "";
+		$data['lastname'] = "";
+
+		if (isset($_POST))
+		{
+
+			$data['firstname'] = $this->input->post("firstname");
+			$data['lastname'] = $this->input->post("lastname");
+
+		}
+
+		$this->load->view('example_form',$data);
+
 	}
 }
 
