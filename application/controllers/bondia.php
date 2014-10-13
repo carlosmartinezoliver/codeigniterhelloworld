@@ -6,6 +6,8 @@ class Bondia extends CI_Controller {
 	{
 		parent::__construct();
 		$this->config->load('codeigniterhelloworld');
+
+		$this->load->helper('url');
 	}
 
 	public function index()
