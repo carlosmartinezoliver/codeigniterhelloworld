@@ -34,6 +34,13 @@ class Bondia extends CI_Controller {
 
 		$this->load->view('greetings',$data);
 	}
+
+	public function example_form()
+	{
+		$data = array();
+
+		$this->load->view('example_form', $data);
+	}
 }
 
 /* End of file welcome.php */
